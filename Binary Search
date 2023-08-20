@@ -10,3 +10,16 @@ class Solution {
         return result;
     }
 }
+
+class GenericSolution<T extends Comparable<T>> {
+    public T search(T[] array, T target){
+        T result = -1;
+        for (int i = 0; i < array.length; i++){
+            if (array[i].compareTo(target) == 0){
+                result = i;
+                break;
+            }
+        }
+        return result;
+    }
+}
